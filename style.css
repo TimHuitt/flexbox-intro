@@ -1,6 +1,7 @@
 * {
     box-sizing: border-box;
 }
+
 body {
     display: grid;
     grid-template-columns: 1fr 3fr;
@@ -10,6 +11,7 @@ body {
     color: white;
     background-color: #222;
 }
+
 nav {
     display: flex;
     background: #333;
@@ -19,6 +21,7 @@ nav {
     padding: 0 20px;
     grid-column: span 4;
 }
+
 nav div {
     display: flex;
     height: 100%;
@@ -26,18 +29,23 @@ nav div {
     align-items: center;
     background: #333;
 }
+
 nav div:hover {
     background: #111;
 }
-nav > div:last-child {
+
+nav>div:last-child {
     margin-left: auto;
 }
+
 main {
     background-color: #111;
 }
+
 footer {
     background-color: #333;
 }
+
 aside {
     display: grid;
     background: #111;
@@ -45,21 +53,26 @@ aside {
     grid-column: 1;
     gap: 10px;
 }
+
 aside div {
     display: flex;
     justify-content: center;
     align-items: center;
     background: #222;
 }
+
 aside div:hover {
     background: #111;
 }
+
 aside div:first-child {
     margin-top: 10px;
 }
+
 aside div:last-child {
     margin-bottom: 10px;
 }
+
 main {
     display: grid;
     grid-column: 2;
@@ -70,27 +83,48 @@ main {
 main section {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    margin: 25px 50px 25px 50px;
     background: #111;
     text-align: center;
 }
 
 main section article {
     display: grid;
+    grid-template-columns: repeat(4, 1fr);
     align-items: center;
     background: #222;
     margin: 5px;
+    padding: 0 10px;
+    gap: 20px;
 }
 
-main > section {
+main section article span {
+    display: grid;
+    height: 80%;
+    background: #444;
+}
+
+main section article span:hover {
+    background: #111;
+}
+
+main>section {
     color: rgb(9, 122, 160);
     grid-column: 1;
 }
 
-main > section + section {
-    color: red;
+main section+section article {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
 }
 
+main section+section article span {
+    display: grid;
+    background: #444;
+}
+
+main section+section article span:hover {
+    background: #111;
+}
 
 footer {
     display: flex;
@@ -99,7 +133,3 @@ footer {
     grid-column: 1 / 3;
     grid-row: 3;
 }
-
-
-
-
